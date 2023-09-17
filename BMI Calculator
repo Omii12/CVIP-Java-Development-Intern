@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class BMI_CALCULATOR{
+    public static void main(String args[]){
+    	
+        Scanner obj=new Scanner(System.in);
+      
+        // Take Weight input
+        System.out.print("Enter weight in kg:"); 
+        double weight_in_kg=obj.nextDouble(); 
+       
+        // Take height input
+        System.out.print("Enter height in inches:"); 
+        double height_in_inches=obj.nextDouble(); 
+        
+        
+        //Convert inches in meters
+        double ht_in_meters=height_in_inches*0.0254; 
+       
+        //Calculate BMI 
+        double BMI=weight_in_kg/(ht_in_meters*ht_in_meters);
+        
+        //print BMI
+        System.out.println("BMI is:"+BMI);
+        
+        if(BMI<18.5){
+        System.out.println("you are Underweight");
+        }
+        else if(BMI<25){
+        System.out.println("you are Normal");
+        }
+        else if(BMI<30){
+        System.out.println("you are Overweight");
+        }
+        else{
+        System.out.println("you are Obesity");
+        }
+    }
+}
